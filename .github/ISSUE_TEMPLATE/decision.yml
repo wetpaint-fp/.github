@@ -6,6 +6,7 @@ body:
     attributes:
       value: |
         **Title:** the question. Example: *Editing model: free-form cells or structured actions only.*
+        **Sidebar:** fill **Owner** and **Needed by** in the fields on the right. Those drive the Decisions view.
   - type: textarea
     id: options
     attributes:
@@ -24,20 +25,6 @@ body:
     validations:
       required: true
   - type: input
-    id: owner
-    attributes:
-      label: Owner
-      description: Who has the authority to close this question.
-    validations:
-      required: true
-  - type: input
-    id: needed_by
-    attributes:
-      label: Needed by
-      description: When it starts blocking an outcome. YYYY-MM-DD.
-    validations:
-      required: true
-  - type: input
     id: blocks
     attributes:
       label: Blocks
@@ -45,4 +32,4 @@ body:
   - type: markdown
     attributes:
       value: |
-        Closes when `docs/decisions/NNN-<title>.md` is merged. Copy **Owner** and **Needed by** to the project fields.
+        Closes when `docs/decisions/NNN-<title>.md` is merged.
