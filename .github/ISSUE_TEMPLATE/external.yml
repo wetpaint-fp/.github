@@ -6,12 +6,13 @@ body:
     attributes:
       value: |
         **Title:** the thing we need. Example: *Snapchat credentials for the pilot client.*
-  - type: input
-    id: waiting_on
+        **Sidebar:** fill **Waiting on**, **Asked on** (today), and **Needed by** in the fields on the right. Those drive the Blockers view.
+  - type: textarea
+    id: request
     attributes:
-      label: Waiting on
-      description: The person or team we need it from. If you don't know, find out before filing.
-      placeholder: IT, Media Ops, a vendor name
+      label: What we need
+      description: Written so the other party can act on it without a meeting. Specific items, names, URLs.
+      placeholder: Identity provider configured for paa-app: client ID and secret, redirect URI for the live URL, and the domain rule for who counts as a media team member.
     validations:
       required: true
   - type: input
@@ -22,14 +23,3 @@ body:
       placeholder: "#41, #43"
     validations:
       required: true
-  - type: input
-    id: needed_by
-    attributes:
-      label: Needed by
-      description: The date it starts blocking work. YYYY-MM-DD.
-    validations:
-      required: true
-  - type: markdown
-    attributes:
-      value: |
-        After creating, copy **Waiting on**, **Asked on** (today), and **Needed by** to the project fields so they appear on the Blockers view and the status page.
