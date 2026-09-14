@@ -1,0 +1,23 @@
+name: Spike
+description: A timeboxed investigation
+type: Spike
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Title:** the question, ending in a question mark. Example: *Does Meta's billing API return the figures the team actualizes against?*
+  - type: input
+    id: timebox
+    attributes:
+      label: Timebox
+      description: How long before we stop regardless of outcome.
+      value: 2 days
+    validations:
+      required: true
+  - type: textarea
+    id: answered_when
+    attributes:
+      label: Answered when
+      description: The artifact that exists at the end. A comment with the comparison, an updated issue, a decision record.
+    validations:
+      required: true

@@ -1,0 +1,45 @@
+name: Outcome
+description: Something a person can verify in the running app
+type: Outcome
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Title:** one plain sentence a non-engineer understands. No bracket prefixes, no implementation verbs.
+        Good: *Scheduled pull lands in the pilot campaign.* Bad: *Build pull scheduler.*
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: Max two sentences. What is true when this is done. Never how.
+      placeholder: A planner opens the pilot campaign and sees its Flowchart with the same rows, months, units, and spend as the workbook.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance
+      description: Three to six checks a non-developer can perform in the deployed app. Never "tests pass" or "PR merged".
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+  - type: input
+    id: depends
+    attributes:
+      label: Depends on
+      description: Issue links, or "none".
+      placeholder: "#12, #14 or none"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Only what the implementer cannot infer. Link decision records; don't restate them. Whole body under 150 words.
+  - type: markdown
+    attributes:
+      value: |
+        After creating, set **Milestone** and **Track** on the project board. Done means **Demoed**, set by a person on Friday.

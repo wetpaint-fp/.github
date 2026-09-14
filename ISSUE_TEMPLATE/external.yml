@@ -1,0 +1,35 @@
+name: External dependency
+description: Something we need from someone outside the team
+type: External
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Title:** the thing we need. Example: *Snapchat credentials for the pilot client.*
+  - type: input
+    id: waiting_on
+    attributes:
+      label: Waiting on
+      description: The person or team we need it from. If you don't know, find out before filing.
+      placeholder: IT, Media Ops, a vendor name
+    validations:
+      required: true
+  - type: input
+    id: blocks
+    attributes:
+      label: Blocks
+      description: The outcomes or decisions that can't finish without this.
+      placeholder: "#41, #43"
+    validations:
+      required: true
+  - type: input
+    id: needed_by
+    attributes:
+      label: Needed by
+      description: The date it starts blocking work. YYYY-MM-DD.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        After creating, copy **Waiting on**, **Asked on** (today), and **Needed by** to the project fields so they appear on the Blockers view and the status page.

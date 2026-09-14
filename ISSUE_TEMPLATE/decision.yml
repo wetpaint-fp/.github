@@ -1,0 +1,48 @@
+name: Decision
+description: A question that gates work
+type: Decision
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Title:** the question. Example: *Editing model: free-form cells or structured actions only.*
+  - type: textarea
+    id: options
+    attributes:
+      label: Options
+      description: One line each. Include the option you don't like.
+      value: |
+        - 
+        - 
+    validations:
+      required: true
+  - type: input
+    id: recommendation
+    attributes:
+      label: Recommendation
+      description: One line. Which option and the main reason.
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: Who has the authority to close this question.
+    validations:
+      required: true
+  - type: input
+    id: needed_by
+    attributes:
+      label: Needed by
+      description: When it starts blocking an outcome. YYYY-MM-DD.
+    validations:
+      required: true
+  - type: input
+    id: blocks
+    attributes:
+      label: Blocks
+      placeholder: "#31, #34"
+  - type: markdown
+    attributes:
+      value: |
+        Closes when `docs/decisions/NNN-<title>.md` is merged. Copy **Owner** and **Needed by** to the project fields.
