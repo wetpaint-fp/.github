@@ -12,7 +12,7 @@ body:
     attributes:
       label: What we need
       description: Written so the other party can act on it without a meeting. Specific items, names, URLs.
-            placeholder: "Identity provider configured for paa-app: client ID and secret, redirect URI for the live URL, and the domain rule for who counts as a media team member."
+      placeholder: "Identity provider configured for paa-app: client ID and secret, redirect URI for the live URL, and the domain rule for who counts as a media team member."
     validations:
       required: true
   - type: input
